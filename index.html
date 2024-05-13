@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Domingues e Grecco</title>
+    <style>
+        body {
+            background-color: #333;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            
+
+        }
+        
+
+        header {
+            background-image: url(./imagens/imagem10.jpg);
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            background-size:cover ;
+            padding: 200px;
+            background-position: top;
+
+        }
+
+        .tabs {
+            list-style-type: none;
+            display: inline-block;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+
+
+        }
+
+        .tabs li {
+            display: inline-block;
+            margin-right: 20px;
+            border-radius: 1 0 0 0;
+            text-align: center;
+        }
+
+        .tabs li a {
+            color:white;
+            text-decoration: none;
+            font-weight: bold;
+            text-align: center;
+            cursor: pointer;
+
+        }
+
+        .tab-content {
+            display: none;
+            padding: 20px;
+            background-color: rgb(35, 38, 43);
+            
+        }
+
+        #home-content {
+            display: block;
+            text-align: center;
+        }
+
+        .home-content-wrapper {
+            display: flex;
+            align-items: center;
+        }
+
+        .home-text {
+            flex: 1;
+            padding-right: 20px;
+            text-align: center;
+
+        }
+
+        .centered-text {
+            padding: 1%;
+            border: 10px;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <h1>
+            <p style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Domingues e Grecco</p>
+            <p>Advogados Associados</p>
+        </h1>
+        <ul class="tabs">
+            <li><a href="#home-content">Home</a></li>
+            <li><a href="#sobre-content">Nossos Serviços</a></li>
+            <li><a href="#contato-content">Contato</a></li>
+            <li><a href="#probono-content">Pro Bono</a></li>
+        </ul>
+    </header>
+
+    <div id="home-content" class="tab-content">
+        <h2>Home</h2>
+        <div class="home-content-wrapper">
+            <div class="home-text">
+                <p>Fundada em 2024, a Domingues e Grecco Advogados Associados, é um escritório que oferece serviços completos e personalizados, trazendo soluções estratégicas e acessíveis em problemas jurídicos para pessoas e empresas.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="sobre-content" class="tab-content">
+        <h2>Nossos Serviços</h2>
+        <div class="centered-text">
+            <p>Nosso escritório conta com Advogados preparados para te atender com compromisso e dedicação nas areas do Direito Digital, Empresarial e Civel.</p>
+            </ul>
+        </div>
+    </div>
+
+    <div id="contato-content" class="tab-content">
+        <h2>Contato</h2>
+        <div class="centered-text">
+            <p>Telefone: (41) 99528-7801</p>
+            <p>Email: mdomingues18092001@gmail.com</p>
+            <p>Instagram: @DominguesGrecco.adv</p>
+            <p>Endereço: Rua Simão Bolivar, 210 - Curitiba/PR - CEP 829030410</p>
+        </div>
+    </div>
+
+    <div id="probono-content" class="tab-content">
+        <h2>Pro Bono</h2>
+        <div class="centered-text">
+            <form action="https://api.staticforms.xyz/submit" method="post">
+                <p>Atendemos de forma gratuita em casos onde o acesso à cidadania e aos direitos são impedidos porque não podem pagar. Se você precisa deste tipo de atendimento nos envie seu caso pela caixa de texto abaixo que entraremos em contato.
+                <p><label for="problema">Digite aqui o seu caso:</label><br></p>
+                <input type="text" name="problema" value="text"><br>
+
+                <button type="submit">Enviar</button>
+            
+                <input type="hidden" name="accessKey" value="3bbe9efc-19Ed3-4c5c-9d52-731bed7626df">     
+                <input type="hidden" name="redirectTo" value="https://dominguesegreccoadvogados.w3spaces-preview.com/index.html"> 
+            </form>
+        </div>
+    </div>
+    <footer style="background-color: #fff;">
+        <div>
+            <p style="text-align: center;color: black">Direitos reservados</p>
+        </div>
+    </footer>
+
+    <script>
+        const tabs = document.querySelectorAll('.tabs li a');
+        tabs.forEach(tab => {
+            tab.addEventListener('click', e => {
+                e.preventDefault();
+                const target = document.querySelector(tab.getAttribute('href'));
+                document.querySelectorAll('.tab-content').forEach(tabContent => {
+                    tabContent.style.display = 'none';
+                });
+                target.style.display = 'block';
+            });
+        });
+    </script>
+</body>
+</html>
